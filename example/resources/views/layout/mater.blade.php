@@ -200,21 +200,27 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../index.html" class="nav-link">
+                <a href="{{route('User.list')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
+                  <p>User</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../index2.html" class="nav-link">
+                <a href="{{route('register')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
+                  <p>register</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../index3.html" class="nav-link">
+                <a href="{{route('product-list')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
+                  <p>product</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('product-add')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>product-add</p>
                 </a>
               </li>
             </ul>

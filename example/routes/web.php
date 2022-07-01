@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 // use Illuminate\Http\Request;
 Route::get('user', function(Request $request){
-    dd($request->all());
+    // dd($request->all());
     $user = [
     [
         'name'=>'Đức',
@@ -37,28 +37,14 @@ Route::get('user', function(Request $request){
     return view('user',[
         'list_user'=> $user
     ]);
-});
+})->name('User.list');
 // Route::get('/user','UserController@index');
-Route::get('user/{id}/{name}',function($id, $name){
-    dd($id,$name);
-});
+// Route::get('user/{id}/{name}',function($id, $name){
+//     dd($id,$name);
+// });
 route::get('register',function(){
     return view('register');
-});
-// route::get('register-succes',function(Request $request){
-//     // nhận dũ liệu và truyền qua cho view
-//     // $repuest lấy tất cả dữ liệu trên thanh url
-//     // dd($request->all());
-//     $name = $request['name'];
-//     $email = $request['email'];
-//     $passwork = $request['passwork'];
-    
-//     return view('register-success',[
-//         'list_name'=>$name,
-//         'list_email'=>$email,
-//         'list_passwork'=>$passwork,
-//     ]);
-// })->name('a');
+})->name('register');
 route::post('register-succes',function(Request $request){
     // nhận dũ liệu và truyền qua cho view
     // $repuest lấy tất cả dữ liệu trên thanh url
@@ -73,3 +59,13 @@ route::post('register-succes',function(Request $request){
         'list_passwork'=>$passwork,
     ]);
 })->name('a');
+
+Route::get('home', function(){
+   return view('home');
+});
+Route::get('product', function(){
+   return view('product.list');
+})->name('product-list');
+Route::get('product-add', function(){
+   return view('product.product-add');
+})->name('product-add');
