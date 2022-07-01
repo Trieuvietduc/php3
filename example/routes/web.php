@@ -67,5 +67,5 @@ Route::get('product', function(){
    return view('product.list');
 })->name('product-list');
 Route::get('product-add', function(){
-   return view('product.product-add');
+   return view('product.add');
 })->name('product-add');
